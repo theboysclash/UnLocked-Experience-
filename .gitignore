@@ -1,0 +1,7 @@
+# Binaries
+interstellar-proxy
+*.test
+*.out
+
+# State directories
+.tailscale-state/
