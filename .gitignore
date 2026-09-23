@@ -1,7 +1,2 @@
-# Binaries
-interstellar-proxy
-*.test
-*.out
-
-# State directories
-.tailscale-state/
+node_modules/
+.cache/
