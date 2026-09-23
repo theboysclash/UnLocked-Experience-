@@ -17,6 +17,20 @@
     <div id="app" class="app"></div>
     <div id="modal-root"></div>
     <div id="toast-root"></div>
+    <script>
+      // Lumen is an ES-module app and must be served over http(s). Opening this file
+      // directly (file://) makes the browser block ./src/main.js, leaving a blank page.
+      // Guide that case to a served URL or the self-contained standalone.html build.
+      if (location.protocol === "file:") {
+        document.getElementById("app").innerHTML =
+          '<main style="max-width:40rem;margin:12vh auto;padding:0 1.5rem;font:15px/1.6 system-ui,-apple-system,sans-serif;color:#e6e8ec">' +
+          '<h1 style="font-size:1.4rem;margin:0 0 .5rem">Open Lumen over a local server</h1>' +
+          '<p style="color:#9aa4b2">This is a JavaScript module app, so browsers block it when the file is opened straight from disk (<code>file://</code>). Do one of these:</p>' +
+          '<ul style="color:#9aa4b2"><li>Serve this folder: <code>python3 -m http.server 4173</code> then open <a style="color:#79d8ba" href="http://localhost:4173/">http://localhost:4173/</a></li>' +
+          '<li>Or open the self-contained build: <a style="color:#79d8ba" href="standalone.html">standalone.html</a></li></ul>' +
+          '</main>';
+      }
+    </script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
