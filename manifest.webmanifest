@@ -1,0 +1,10 @@
+{
+  "name": "Lumen IDE",
+  "short_name": "Lumen",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121418",
+  "theme_color": "#121418",
+  "description": "Browser-native AI IDE"
+}
